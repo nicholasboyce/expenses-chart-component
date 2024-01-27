@@ -74,7 +74,9 @@ strong, b {
 }
 
 .logo {
+    position: relative;
     width: clamp(3.75rem, 3.486rem + 1.127vw, 4.5rem);
+    right: 0.5rem;
 }
 
 .balance {
@@ -91,7 +93,7 @@ strong, b {
 }
 
 .summary {
-    padding-block: clamp(1.813rem, 1.548rem + 1.127vw, 2.563rem);
+    padding-block: clamp(1.813rem, 1.548rem + 1.127vw, 2.563rem) clamp(2rem, 1.516rem + 2.066vw, 3.375rem);
     padding-inline: clamp(1.25rem, 0.788rem + 1.972vw, 2.563rem);
     background-color: var(--clr-neutral-110);
     color: var(--clr-neutral-500);
@@ -101,6 +103,7 @@ strong, b {
 .summary-title {
     color: var(--clr-neutral-800);
     font-size: var(--title-font-size);
+    line-height: 0.75;
 }
 
 .chart {
@@ -159,11 +162,12 @@ strong, b {
 }
 .day {
     text-align: center;
-    font-size: clamp(0.7rem, 0.55rem + 0.638vw, 1.125rem);
+    font-size: clamp(0.7rem, 0.55rem + 0.638vw, 1rem);
+    line-height: 0.5;
 }
 
 .summary-details {
-    border-block-start: 1px solid var(--clr-neutral-200);
+    border-block-start: 2px solid var(--clr-neutral-200);
     padding-block-start: clamp(1.813rem, 1.614rem + 0.845vw, 2.375rem);
 }
 
@@ -180,7 +184,7 @@ strong, b {
 
 .summary-amount {
     color: var(--clr-neutral-800);
-    font-size: clamp(1.95rem, 1.686rem + 1.127vw, 2.7rem);
+    font-size: clamp(1.95rem, 1.598rem + 1.502vw, 2.95rem);
     line-height: clamp(2.34rem, 2.451rem + -0.473vw, 2.025rem);
     letter-spacing: clamp(0rem, -0.022rem + 0.094vw, 0.063rem);
 }
