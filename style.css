@@ -20,7 +20,7 @@
     --title-font-size: clamp(1.519rem, 1.34rem + 0.761vw, 2.025rem);
     --fw-regular: 400;
     --fw-bold: 700;
-    --border-radius: 0.75rem;
+    --border-radius: 1rem;
 }
 
 * {
@@ -70,7 +70,7 @@ strong, b {
     color: var(--clr-neutral-110);
     align-items: center;
     line-height: 0.75;
-    border-radius: var(--border-radius);
+    border-radius: calc(var(--border-radius) * 1.2);
 }
 
 .logo {
