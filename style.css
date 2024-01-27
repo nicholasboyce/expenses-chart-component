@@ -91,7 +91,6 @@ strong, b {
 }
 
 .summary {
-    /* padding: 2.5625rem; */
     padding-block: clamp(1.813rem, 1.548rem + 1.127vw, 2.563rem);
     padding-inline: clamp(1.25rem, 0.788rem + 1.972vw, 2.563rem);
     background-color: var(--clr-neutral-110);
@@ -115,16 +114,29 @@ strong, b {
 }
 
 .bar {
-    border-radius: calc(var(--border-radius) * 0.25);
-    background-color: var(--clr-primary-400);
+    border-radius: calc(var(--border-radius) * 0.3);
+    --fill-color: hsl(var(--clr-primary-400-hsl));
+    background-color: var(--fill-color);
     height: 3rem;
     align-self: end;
 }
 
-.today {
-    background-color: var(--clr-accent-300);
+.bar:hover,
+.bar:active,
+.bar:focus {
+    --fill-color: hsl(var(--clr-primary-400-hsl), 0.8);
+    cursor: pointer;
 }
 
+.today {
+    --fill-color: hsl(var(--clr-accent-300-hsl));
+}
+
+.today:hover,
+.today:active,
+.today:focus {
+    --fill-color: hsl(var(--clr-accent-300-hsl), 0.8)
+}
 .day {
     text-align: center;
     font-size: clamp(0.7rem, 0.55rem + 0.638vw, 1.125rem);
