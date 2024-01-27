@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script type="module" src="main.js"></script>
+  
+  <title>Frontend Mentor | Expenses chart component</title>
+</head>
+<body>
+
+  <main>
+    <div class="balance-card">
+      <div class="balance">
+        <p class="balance-title">My balance</p>
+        <p class="balance-amount"><strong>$921.48</strong></p>
+      </div>
+      <svg width="72" height="48" viewBox="0 0 72 48" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#382314" cx="48" cy="24" r="24"/><circle stroke="#FFF" stroke-width="2" cx="24" cy="24" r="23"/></g></svg>
+    </div>
+    <article class="summary">
+      <h2 class="summary-title"><strong>Spending - Last 7 days</strong></h2>
+      <div class="chart" data-js="chart"> <!--Is meant to be a grid, 2 rows, 7 columns-->
+        <div class="bar" data-js="mon"></div>
+        <div class="bar" data-js="tue"></div>
+        <div class="bar today" data-js="wed"></div>
+        <div class="bar" data-js="thu"></div>
+        <div class="bar" data-js="fri"></div>
+        <div class="bar" data-js="sat"></div>
+        <div class="bar" data-js="sun"></div>
+        <p class="day">mon</p>
+        <p class="day">tue</p>
+        <p class="day">wed</p>
+        <p class="day">thu</p>
+        <p class="day">fri</p>
+        <p class="day">sat</p>
+        <p class="day">sun</p>
+      </div>
+      <div class="summary-details">
+        <p class="summary-caption">Total this month</p>
+        <div class="summary-numbers">
+          <p class="summary-amount"><strong>$478.33</strong></p>
+          <div class="percentage">
+            <p class="percentage-amount"><b>+2.4%</b></p>
+            <p class="percentage-details">from last month</p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+</body>
+</html>
