@@ -113,7 +113,7 @@ strong, b {
     grid-template-rows: 1fr auto;
     row-gap: 1rem;
     column-gap: clamp(0.75rem, 0.596rem + 0.657vw, 1.188rem);
-    padding-block-end: clamp(1.813rem, 1.614rem + 0.845vw, 2.375rem);
+    padding-block-end: clamp(1.181rem, 0.805rem + 1.606vw, 2.25rem);
     margin-block-start: calc(2 * 2.1875rem);
 }
 
@@ -169,7 +169,7 @@ strong, b {
 
 .summary-details {
     border-block-start: 2px solid var(--clr-neutral-200);
-    padding-block-start: clamp(1.813rem, 1.614rem + 0.845vw, 2.375rem);
+    padding-block-start: clamp(1.181rem, 0.805rem + 1.606vw, 2.25rem);
 }
 
 .summary-caption {
