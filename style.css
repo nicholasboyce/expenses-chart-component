@@ -104,6 +104,7 @@ strong, b {
     color: var(--clr-neutral-800);
     font-size: var(--title-font-size);
     line-height: 0.75;
+    letter-spacing: 0.5px;
 }
 
 .chart {
