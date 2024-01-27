@@ -16,6 +16,8 @@
 
     --ff-default: 'DM Sans', sans-serif;
     --fs-p: 18px;
+    --dynamic-font-size: clamp(0.96rem, 0.902rem + 0.248vw, 1.125rem);
+    --title-font-size: clamp(1.519rem, 1.34rem + 0.761vw, 2.025rem);
     --fw-regular: 400;
     --fw-bold: 700;
     --border-radius: 0.75rem;
@@ -49,7 +51,7 @@ body {
 }
 
 main {
-    width: min(90%, 33.75rem);
+    width: min(91.4%, 33.75rem);
     display: flex;
     flex-direction: column;
     row-gap: 1.5rem;
@@ -63,24 +65,35 @@ strong, b {
     background-color: var(--clr-primary-400);
     display: flex;
     justify-content: space-between;
-    padding: 2rem;
+    padding-block: clamp(1.5rem, 1.324rem + 0.751vw, 2rem);
+    padding-inline: clamp(1.25rem, 0.986rem + 1.127vw, 2rem);
     color: var(--clr-neutral-110);
     align-items: center;
     line-height: 0.75;
     border-radius: var(--border-radius);
 }
 
+.logo {
+    width: clamp(3.75rem, 3.486rem + 1.127vw, 4.5rem);
+}
+
 .balance {
     display: grid;
-    row-gap: 1.25rem;
+    row-gap: clamp(1rem, 0.912rem + 0.376vw, 1.25rem);
+}
+
+.balance-title {
+    font-size: clamp(0.96rem, 0.902rem + 0.248vw, 1.125rem);
 }
 
 .balance-amount {
-    font-size: calc(var(--fs-p) * 1.8);
+    font-size: var(--title-font-size);
 }
 
 .summary {
-    padding: 2.5625rem;
+    /* padding: 2.5625rem; */
+    padding-block: clamp(1.813rem, 1.548rem + 1.127vw, 2.563rem);
+    padding-inline: clamp(1.25rem, 0.788rem + 1.972vw, 2.563rem);
     background-color: var(--clr-neutral-110);
     color: var(--clr-neutral-500);
     border-radius: var(--border-radius);
@@ -88,7 +101,7 @@ strong, b {
 
 .summary-title {
     color: var(--clr-neutral-800);
-    font-size: calc(var(--fs-p) * 1.8);
+    font-size: var(--title-font-size);
 }
 
 .chart {
@@ -96,8 +109,8 @@ strong, b {
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: 1fr auto;
     row-gap: 1rem;
-    column-gap: 1.1875rem;
-    padding-block-end: 2.375rem;
+    column-gap: clamp(0.75rem, 0.596rem + 0.657vw, 1.188rem);
+    padding-block-end: clamp(1.813rem, 1.614rem + 0.845vw, 2.375rem);
     margin-block-start: calc(2 * 2.1875rem);
 }
 
@@ -114,11 +127,16 @@ strong, b {
 
 .day {
     text-align: center;
+    font-size: clamp(0.7rem, 0.55rem + 0.638vw, 1.125rem);
 }
 
 .summary-details {
     border-block-start: 1px solid var(--clr-neutral-200);
-    padding-block-start: 2.375rem;
+    padding-block-start: clamp(1.813rem, 1.614rem + 0.845vw, 2.375rem);
+}
+
+.summary-caption {
+    font-size: var(--dynamic-font-size);
 }
 
 .summary-numbers {
@@ -130,14 +148,16 @@ strong, b {
 
 .summary-amount {
     color: var(--clr-neutral-800);
-    font-size: calc(var(--fs-p) * 2.7);
-    letter-spacing: 1px;
+    font-size: clamp(1.95rem, 1.686rem + 1.127vw, 2.7rem);
+    line-height: clamp(2.34rem, 2.451rem + -0.473vw, 2.025rem);
+    letter-spacing: clamp(0rem, -0.022rem + 0.094vw, 0.063rem);
 }
 
 .percentage {
     display: flex;
     flex-direction: column;
     row-gap: 0.625rem;
+    font-size: var(--dynamic-font-size);
 }
 
 .percentage-amount {
